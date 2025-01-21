@@ -2,7 +2,7 @@
 
 # Variables
 id=9999
-vm_name="debian-tpl"
+vm_name="debian-cloudinit-tpl"
 memory=4096
 cores=2
 disk_size="20G"
