@@ -67,6 +67,12 @@ qm set $id --ide2 $cloudinit_drive
 qm set $id --agent enabled=1
 echo "VM options set."
 
+# Add serial port
+echo "Adding serial port..."
+qm set $id --serial0 socket
+qm set $id --vga serial0
+echo "Serial port added."
+
 # Convert to template
 echo "Converting VM to template..."
 qm template $id
