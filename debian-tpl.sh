@@ -65,13 +65,8 @@ qm set $id --boot order=scsi0
 qm set $id --cpu host --cores $cores --memory $memory
 qm set $id --ide2 $cloudinit_drive
 qm set $id --agent enabled=1
+qm set $id --serial0 socket --vga serial0
 echo "VM options set."
-
-# Add serial port
-echo "Adding serial port..."
-qm set $id --serial0 socket
-qm set $id --vga serial0
-echo "Serial port added."
 
 # Convert to template
 echo "Converting VM to template..."
