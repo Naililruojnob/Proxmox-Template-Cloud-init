@@ -45,7 +45,7 @@ echo "Debian image has been customized."
 
 # Create the VM
 echo "Creating the VM with ID $id..."
-qm create $id --name $vm_name --net0 virtio,bridge=$network_bridge --scsihw $scsihw_type
+qm create $id --name $vm_name --net0 virtio,bridge=$network_bridge --scsihw $scsihw_type --pool Template
 echo "VM created."
 
 # Import the disk
