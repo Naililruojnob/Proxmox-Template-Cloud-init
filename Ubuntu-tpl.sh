@@ -4,7 +4,7 @@
 imageURL="https://cloud-images.ubuntu.com/daily/server/jammy/current/jammy-server-cloudimg-amd64-disk-kvm.img"
 imageName="jammy-server-cloudimg-amd64-disk-kvm.img"
 volumeName="local-lvm"
-virtualMachineId="9000"
+virtualMachineId="9998"
 templateName="ubuntu-cloudinit-tpl"
 tmp_cores="2"
 tmp_memory="4096"
@@ -27,7 +27,7 @@ echo "Image has been customized."
 # Création de la machine virtuelle
 echo "Creating the VM with ID $virtualMachineId..."
 qm destroy $virtualMachineId 2>/dev/null  # Supprimer une ancienne VM si elle existe
-qm create $virtualMachineId --name $templateName --memory $tmp_memory --cores $tmp_cores --net0 virtio,bridge=vmbr0
+qm create $virtualMachineId --name $templateName --memory $tmp_memory --cores $tmp_cores --net0 virtio,bridge=vmbr0 --pool Template
 echo "VM created."
 
 # Importation du disque .img dans Proxmox
