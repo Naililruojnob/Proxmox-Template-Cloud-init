@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-imageURL="https://cloud-images.ubuntu.com/daily/server/jammy/current/jammy-server-cloudimg-amd64-disk-kvm.img"
+imageURL="https://cloud-images.ubuntu.com/daily/server/noble/current/noble-server-cloudimg-amd64.img"
 imageName="jammy-server-cloudimg-amd64-disk-kvm.img"
 volumeName="local-lvm"
 virtualMachineId="9998"
